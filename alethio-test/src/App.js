@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
 
@@ -7,6 +6,7 @@ import { useMediaQuery } from 'react-responsive'
 import Header from './components/Header/Header'
 import Service from './pages/Service/Service'
 import SignUp from './pages/SignUp/SignUp'
+import Login from './pages/Login/Login'
 
 function App() {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 414 })
@@ -17,6 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Service} />
           <Route path="/sign-up" component={SignUp}/>
+          <Route path="/login" component={Login}/>
         </Switch>
       </Router>
     </div>
