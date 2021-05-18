@@ -7,6 +7,8 @@ import Header from './components/Header/Header'
 import Service from './pages/Service/Service'
 import SignUp from './pages/SignUp/SignUp'
 import Login from './pages/Login/Login'
+import Orders from './pages/Orders/Orders'
+import Order from './pages/Order/Order'
 
 function App() {
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 414 })
@@ -18,6 +20,8 @@ function App() {
           <Route exact path="/" component={Service} />
           <Route path="/sign-up" component={SignUp}/>
           <Route path="/login" component={Login}/>
+          <Route exact={true} path="/mypage/order" component={Orders}/>
+          <Route exact={true} path="/mypage/order/:id" component={Order}/>
         </Switch>
       </Router>
     </div>

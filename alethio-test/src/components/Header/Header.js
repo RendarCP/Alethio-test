@@ -21,9 +21,11 @@ function Header({ mobile }) {
         <div style={{ padding: 20, fontSize: 20, fontWeight: 'bold' }}>Logo</div>
       </Link>
       <div style={{ paddingRight: 20, display: 'flex', flexDirection:'row', height: '100%' }}>
-        <HeaderButton>서비스</HeaderButton>
+        <Link style={{ textDecoration: 'none', color: 'black'}} to='/'>
+          <HeaderButton>서비스</HeaderButton>
+        </Link>
         <Spacer right={10} />
-        <Link style={{ textDecoration: 'none', color: 'black'}} to='/sign-up'>
+        <Link style={{ textDecoration: 'none', color: 'black'}} to={user.tocken ? '/mypage/order' : 'sign-up'}>
           <HeaderButton>{user.tocken ? '마이페이지' : '회원가입'}</HeaderButton>
         </Link>
         <Spacer right={10} />
