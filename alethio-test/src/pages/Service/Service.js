@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 function Service({ history }) {
   const user = useSelector(state => state.user)
 
+  // 오더 부분
   const onOrderClick = () => {
     if(user.tocken !== ''){
       alert('주문성공')
@@ -17,6 +18,7 @@ function Service({ history }) {
       history.push('/login')
     }
   }
+
   return(
     <div>
       <img src={Image} style={{ display: "flex", width: "50%", height: "100%", margin: "0 auto" }}/>

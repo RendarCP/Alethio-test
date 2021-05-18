@@ -41,9 +41,15 @@ function Header({ mobile }) {
         <img onClick={onMenuClick} src={Icon} style={{ width: 50, height: 50 }} />
       </MobileContainer>
       <div style={{ display: isMobile ? 'block' : 'none' }}>
-        <MobileItem>서비스</MobileItem>
-        <MobileItem>회원가입</MobileItem>
-        <MobileItem>로그인</MobileItem>
+        <Link style={{ textDecoration: 'none', color: 'black'}} to='/'>
+          <MobileItem>서비스</MobileItem>
+        </Link>
+        <Link style={{ textDecoration: 'none', color: 'black'}} to={user.tocken ? '/mypage/order' : 'sign-up'}>
+          <MobileItem>{user.tocken ? '마이페이지' : '회원가입'}</MobileItem>
+        </Link>
+        <Link style={{ textDecoration: 'none', color: 'black'}} to='/login'>
+          <MobileItem>{user.tocken ? '로그아웃' : '로그인'}</MobileItem>
+        </Link>
       </div>
     </>
   )

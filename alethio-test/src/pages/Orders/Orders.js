@@ -28,6 +28,7 @@ function Orders({ history }) {
 
 
   return(
+    // 서버에서 1초 딜레이가 걸리므로 데이터가 없을시 로딩 발생 
     <div>
       {/* 아이템 영역 */}
       {

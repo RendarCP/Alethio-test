@@ -6,7 +6,7 @@ import Spacer from '../../components/Spacer/Spacer'
 import Button from '../../components/Button/Button'
 
 import { useDispatch } from 'react-redux'
-import { login_success, login_fail } from '../../modules/user';
+import { login_success } from '../../modules/user';
 
 import axios from 'axios'
 
@@ -15,10 +15,10 @@ function Login({ history }) {
     email:'',
     password: '',
   })
-
+  
+  // 리덕스 처리
   const dispatch = useDispatch();
   const login = data => dispatch(login_success(data))
-  const fail = err => dispatch(login_fail(err))
   
   const onChange = (e) => {
     const { value, name} = e.target
@@ -28,6 +28,7 @@ function Login({ history }) {
     })
   }
   
+  // 로그인 처리
   const onLogin = () => {
     console.log('test')
     axios.post('http://106.10.53.116:8099/login',{

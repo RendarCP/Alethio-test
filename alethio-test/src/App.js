@@ -11,6 +11,7 @@ import Orders from './pages/Orders/Orders'
 import Order from './pages/Order/Order'
 
 function App() {
+  // react-responsive를 이용하여 제작 
   const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 414 })
   return (
     <div style={{ width: '100%'}}>

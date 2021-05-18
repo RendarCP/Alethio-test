@@ -6,7 +6,7 @@ import Button from '../../components/Button/Button'
 import Validation from '../../components/Validation/Validation'
 
 import { useDispatch } from 'react-redux'
-import { login_success, login_fail } from '../../modules/user';
+import { login_success } from '../../modules/user';
 
 import axios from 'axios'
 
@@ -28,7 +28,6 @@ function SignUp({ history }) {
   // 전역상태 리덕스 처리
   const dispatch = useDispatch();
   const login = data => dispatch(login_success(data))
-  const fail = err => dispatch(login_fail(err))
   
   // input 관련 함수 처리
   const onChange = (e) => {
